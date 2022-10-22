@@ -80,7 +80,7 @@ export default function Dashboard(props) {
             columns={9}
           >
             {Object.entries(rates).map((v) => (
-              <Grid key{v} item md={2.1} lg={1.65}>
+              <Grid key={v} item md={2.1} lg={1.65}>
                 <Item sx={{ backgroundColor: 'whitesmoke'}}>
                   <Pair pair={base + "/" + v["0"]} rate={v["1"]} />
                 </Item>
