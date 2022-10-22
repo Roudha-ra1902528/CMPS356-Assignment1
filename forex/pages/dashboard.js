@@ -36,7 +36,7 @@ export default function Dashboard(props) {
   const [rates, setRates] = useState({});
 
   useEffect(() => {
-    setBase(localStorage.getItem("base"))
+    setBase(localStorage.getItem("base") ?? base)
     console.log(base)
   }
     ,[])
