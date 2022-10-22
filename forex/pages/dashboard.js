@@ -64,7 +64,7 @@ export default function Dashboard(props) {
             <InputLabel id="demo-simple-select-label">Base Currency</InputLabel>
             <Select value={base} id="baseCurrency" onChange={handleChange}>
               {Object.keys(props.symbols).map((s) => (
-                <MenuItem value={s}>{s}</MenuItem>
+                <MenuItem key={s} value={s}>{s}</MenuItem>
               ))}
             </Select>
           </FormControl>
@@ -80,7 +80,7 @@ export default function Dashboard(props) {
             columns={9}
           >
             {Object.entries(rates).map((v) => (
-              <Grid item md={2.1} lg={1.65}>
+              <Grid key{v} item md={2.1} lg={1.65}>
                 <Item sx={{ backgroundColor: 'whitesmoke'}}>
                   <Pair pair={base + "/" + v["0"]} rate={v["1"]} />
                 </Item>
